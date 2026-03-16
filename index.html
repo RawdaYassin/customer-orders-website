@@ -3,106 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Management Portal</title>
+    <title>Hospital Management Portal - Full Data Entry</title>
     <style>
-        /* Modern CSS Reset and Styling */
         body { 
             font-family: 'Segoe UI', Arial, sans-serif; 
             line-height: 1.6; 
             color: #333; 
-            max-width: 900px; 
+            max-width: 950px; 
             margin: 0 auto; 
             padding: 40px 20px; 
-            background-color: #eef2f7;
+            background-color: #f0f4f8;
         }
-
         header {
             text-align: center;
             margin-bottom: 40px;
-            padding: 20px;
-            background: #1a5c8a;
+            padding: 30px;
+            background: #2c3e50;
             color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 12px;
         }
-
         section { 
             background: #ffffff; 
             padding: 30px; 
-            margin-bottom: 35px; 
+            margin-bottom: 30px; 
             border-radius: 12px; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
-
-        section:hover {
-            transform: translateY(-5px);
-        }
-
         h2 { 
-            margin-top: 0; 
-            color: #1a5c8a; 
-            font-size: 1.5rem;
-            border-bottom: 2px solid #eef2f7; 
-            padding-bottom: 12px;
+            color: #2980b9; 
+            border-bottom: 2px solid #ecf0f1; 
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-
         .form-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
-
-        .form-group { margin-bottom: 20px; }
-
-        label { 
-            display: block; 
-            font-weight: 600; 
-            margin-bottom: 8px; 
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        input, textarea {
+        .form-group { margin-bottom: 15px; }
+        label { display: block; font-weight: 600; margin-bottom: 5px; font-size: 0.9rem; }
+        input, textarea, select {
             width: 100%;
             padding: 12px;
-            border: 1.5px solid #dce1e7;
+            border: 1px solid #dcdde1;
             border-radius: 6px;
             box-sizing: border-box;
-            font-size: 1rem;
+            background-color: #fdfdfd;
         }
-
-        input:focus {
-            outline: none;
-            border-color: #1a5c8a;
-            box-shadow: 0 0 0 3px rgba(26, 92, 138, 0.1);
-        }
-
         button {
-            background-color: #1a5c8a;
+            background-color: #2980b9;
             color: white;
-            padding: 14px 28px;
+            padding: 15px 30px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: bold;
             width: 100%;
-            margin-top: 10px;
+            margin-top: 20px;
         }
-
-        button:hover { 
-            background-color: #124061;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+        button:hover { background-color: #2471a3; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Hospital Data Management System</h1>
-        <p>Information Systems Engineering - Data Entry Portal</p>
+        <h1>Hospital Database Management</h1>
+        <p>Complete Data Entry Interface for ISE 452 Assignment</p>
     </header>
 
     <section>
@@ -112,13 +79,13 @@
                 <div class="form-group"><label>Patient Number</label><input type="number" required></div>
                 <div class="form-group"><label>First Name</label><input type="text" required></div>
                 <div class="form-group"><label>Last Name</label><input type="text" required></div>
-                <div class="form-group"><label>Email Address</label><input type="email"></div>
                 <div class="form-group"><label>Street Address</label><input type="text"></div>
                 <div class="form-group"><label>City</label><input type="text"></div>
                 <div class="form-group"><label>State</label><input type="text"></div>
                 <div class="form-group"><label>Zip Code</label><input type="text"></div>
+                <div class="form-group"><label>Email Address</label><input type="email"></div>
             </div>
-            <button type="submit">Register Patient</button>
+            <button type="submit">Save Patient Record</button>
         </form>
     </section>
 
@@ -130,26 +97,27 @@
                 <div class="form-group"><label>First Name</label><input type="text" required></div>
                 <div class="form-group"><label>Last Name</label><input type="text" required></div>
                 <div class="form-group"><label>Phone Number</label><input type="tel"></div>
+                <div class="form-group"><label>Email Address</label><input type="email"></div>
                 <div class="form-group"><label>Specialization</label><input type="text"></div>
                 <div class="form-group"><label>Department</label><input type="text"></div>
             </div>
-            <button type="submit">Add Doctor Record</button>
+            <button type="submit">Save Doctor Record</button>
         </form>
     </section>
 
     <section>
-        <h2>Appointment Scheduling</h2>
+        <h2>Appointment Details</h2>
         <form>
             <div class="form-grid">
                 <div class="form-group"><label>Appointment Number</label><input type="number" required></div>
                 <div class="form-group"><label>Date</label><input type="date" required></div>
                 <div class="form-group"><label>Time</label><input type="time" required></div>
                 <div class="form-group"><label>Room Number</label><input type="text"></div>
-                <div class="form-group"><label>Status</label><input type="text" placeholder="e.g. Pending"></div>
-                <div class="form-group"><label>Patient ID</label><input type="number" required></div>
-                <div class="form-group"><label>Doctor ID</label><input type="number" required></div>
+                <div class="form-group"><label>Appointment Status</label><input type="text"></div>
+                <div class="form-group"><label>Patient ID (Foreign Key)</label><input type="number" required></div>
+                <div class="form-group"><label>Doctor ID (Foreign Key)</label><input type="number" required></div>
             </div>
-            <button type="submit">Confirm Appointment</button>
+            <button type="submit">Create Appointment</button>
         </form>
     </section>
 
@@ -158,12 +126,12 @@
         <form>
             <div class="form-group"><label>Treatment Number</label><input type="number" required></div>
             <div class="form-group"><label>Treatment Name</label><input type="text" required></div>
-            <div class="form-group"><label>Description</label><textarea rows="2"></textarea></div>
+            <div class="form-group"><label>Detailed Description</label><textarea rows="3"></textarea></div>
             <div class="form-grid">
-                <div class="form-group"><label>Cost ($)</label><input type="number" step="0.01"></div>
-                <div class="form-group"><label>Status</label><input type="text"></div>
+                <div class="form-group"><label>Treatment Cost ($)</label><input type="number" step="0.01"></div>
+                <div class="form-group"><label>Treatment Status</label><input type="text"></div>
             </div>
-            <button type="submit">Add Treatment</button>
+            <button type="submit">Save Treatment Type</button>
         </form>
     </section>
 
@@ -171,11 +139,11 @@
         <h2>Link Appointment & Treatment</h2>
         <form>
             <div class="form-grid">
-                <div class="form-group"><label>Reference Number</label><input type="number" required></div>
+                <div class="form-group"><label>Link ID (Reference)</label><input type="number" required></div>
                 <div class="form-group"><label>Appointment ID</label><input type="number" required></div>
                 <div class="form-group"><label>Treatment ID</label><input type="number" required></div>
             </div>
-            <button type="submit">Save Association</button>
+            <button type="submit">Confirm Association</button>
         </form>
     </section>
 
